@@ -1,0 +1,146 @@
+/* main styling */
+div {
+  font-family: Optima;
+}
+
+.topnav a {
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+nav{
+  text-align: center;
+}
+
+.topnav a:hover {
+  background-color: #341c70;
+  color: rgb(255, 255, 255);
+}
+
+.topnav .active {
+  background-color: #b6a3d3;
+  color: white;
+}
+
+li{
+  display:inline;
+}
+/* title styling */
+.home {
+  text-align: center;
+  line-height:25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20em
+}
+
+.title{
+  letter-spacing: 10px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f4f1;
+}
+
+/* timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  width: 60%;              
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+  width: 100%;
+}
+
+
+.timeline-content {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;      
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.timeline-text {
+  color: #555;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #ddd;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row-reverse; 
+}
+
+.timeline-image img {
+  width: auto; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%;
+}
+
+/* to be displayed on any device */
+@media only screen and (max-width: 1023px) {
+  .timeline-item-content {
+      max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .timeline-item-content,
+  .timeline-item:nth-child(odd) .timeline-item-content {
+      padding: 15px 10px;
+      text-align: center;
+      align-items: center;
+  }
+
+  .timeline-item-content .tag {
+      width: calc(100% - 10px);
+      text-align: center;
+  }
+
+  .timeline-item-content time {
+      margin-top: 20px;
+  }
+
+  .timeline-item-content a {
+      text-decoration: underline;
+  }
+
+  .timeline-item-content a::after {
+      display: none;
+  }
+}
